@@ -3,12 +3,12 @@ const express = require('express');
 const app = express();
 const path = require("path");
 
-app.use('/', express.static('/build'));
+// app.use('/', express.static('/build'));
 
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.get("/vchat", (req, res) => {
+app.get("/", (req, res) => {
     res.render("try.ejs");
 })
 
